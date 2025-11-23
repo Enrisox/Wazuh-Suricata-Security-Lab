@@ -11,5 +11,9 @@ The installation process for the Debian and Ubuntu agents is basically just slig
 
 I repeated the same process for the Ubuntu VM and verified the status of the Wazuh agent on both machines using the command `**sudo systemctl status wazuh-agent** <br>
 
+![Wazuh agent_status](img/img6.png) <br>
+
+
+
 
 
