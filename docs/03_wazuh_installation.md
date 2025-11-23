@@ -6,6 +6,8 @@ login: wazuh-user Password:wazuh . <br>
 
 ![Wazuh-server terminal](img/img2.png)
 
+In the Wazuh server console, I ran the `ip a` command to check which IP address was assigned via DHCP.
+After completing the installation of Fedora, Ubuntu, and Kali Linux, and ensuring that the VMs were in bridge mode(network's settings on VirtualBox) on the same network as the Wazuh server, I verified the IP addresses they obtained and confirmed that they could ping each other without issues.
 
 
 
