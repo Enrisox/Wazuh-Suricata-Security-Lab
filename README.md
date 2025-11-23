@@ -1,2 +1,3 @@
 # Wazuh-Suricata-Security-Lab
-I am Enrico, a Cybersecurity student, and in this lab environment I study and apply Wazuh and its integrations, such as Suricata and VirusTotal, to protect endpoints and corporate networks
+I’m Enrico, a Cybersecurity student.
+In this lab environment I deploy and experiment with Wazuh and its main integrations — including Suricata and VirusTotal — to monitor, detect, and protect endpoints and small enterprise networks
