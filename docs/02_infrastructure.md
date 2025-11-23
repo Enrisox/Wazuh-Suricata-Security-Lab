@@ -24,8 +24,7 @@ The first step was creating the **Wazuh virtual machine** with the following res
 
 The official **Wazuh OVA** includes a full stack:
 
-![WAZUH OVA Download](img/img1.png)
-
+![WAZUH OVA Download](img/img1.png)<br><br>
 
 | Component | Description |
 |-----------|-------------|
