@@ -7,4 +7,9 @@ I entered the Wazuh server IP, selected the operating system where I would insta
 
 
 ![Wazuh agent_install](img/img5.png) <br>
-The Debian and Ubuntu agent installation are basically just a bit different.
+The installation process for the Debian and Ubuntu agents is basically just slightly different.<br>
+
+I repeated the same process for the Ubuntu VM and verified the status of the Wazuh agent on both machines using the command `**sudo systemctl status wazuh-agent** <br>
+
+
+
