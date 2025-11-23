@@ -23,7 +23,9 @@ The first step was creating the **Wazuh virtual machine** with the following res
 | Storage   | 50 GB SSD     |
 
 The official **Wazuh OVA** includes a full stack:
+
 ![WAZUH OVA Download](img/img1.png)
+
 
 | Component | Description |
 |-----------|-------------|
