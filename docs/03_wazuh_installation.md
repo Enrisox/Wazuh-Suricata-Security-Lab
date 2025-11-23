@@ -2,7 +2,7 @@
 
 ## Initial configuration
 I started the Wazuh VM and logged in using the default credentials for this test.<br>
-**login: wazuh-user**<br> **Password:wazuh . <br>**
+**login: wazuh-user**<br> **Password:wazuh  <br>**
 
 ![Wazuh-server terminal](img/img2.png)
 
