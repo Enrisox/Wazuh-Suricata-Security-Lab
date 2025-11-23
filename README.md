@@ -12,7 +12,7 @@ All detailed documentation is inside the `/docs` folder.
 ➡️ [01_intro.md](docs/01_intro.md)
 
 ## **2️⃣ Lab Infrastructure**
-➡️ [02_lab_infrastructure.md](docs/02_lab_infrastructure.md)
+➡️ [02_lab_infrastructure.md](docs/02_lab_setup.md)
 
 ## **3️⃣ Wazuh Installation & Configuration**
 ➡️ [03_wazuh_installation.md](docs/03_wazuh_installation.md)
