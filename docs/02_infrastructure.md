@@ -20,7 +20,7 @@ The first step was creating the **Wazuh virtual machine** with the following res
 |-----------|---------------|
 | CPU       | 4 cores       |
 | RAM       | 8 GB          |
-| Storage   | 50 GB SSD     |
+| Storage   | 50 GB SSD     |<br><br>
 
 The official **Wazuh OVA** includes a full stack:
 
