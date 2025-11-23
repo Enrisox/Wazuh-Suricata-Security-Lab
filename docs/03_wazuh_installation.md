@@ -2,11 +2,11 @@
 
 ## Initial configuration
 I started the Wazuh VM and logged in using the default credentials for this test.<br>
-login: wazuh-user Password:wazuh . <br>
+**login: wazuh-user**<br> **Password:wazuh . <br>**
 
 ![Wazuh-server terminal](img/img2.png)
 
-In the Wazuh server console, I ran the `ip a` command to check which IP address was assigned via DHCP.
+In the Wazuh server console, I ran the `**ip a**` command to check which IP address was assigned via DHCP.
 
 <br>
 After completing the installation of Fedora, Ubuntu, and Kali Linux, and ensuring that the VMs were in bridge mode on the same network as the Wazuh server, I verified the IP addresses they obtained and confirmed that they could ping each other without issues.
@@ -18,11 +18,11 @@ After completing the installation of Fedora, Ubuntu, and Kali Linux, and ensurin
 ### Temporary solution to assign a static IP:
 
 
-sudo ip addr add 192.168.1.4/24 dev eth0
-sudo ip addr del 192.168.1.*/24 dev eth0  # removes the previous DHCP IP
+**sudo ip addr add 192.168.1.4/24 dev eth0**
+**sudo ip addr del 192.168.1.*/24 dev eth0  # removes the previous DHCP IP**<br>
 Alternatively, if the Wazuh server is always assigned the same IP (e.g., 192.168.1.6), I can change the Wazuh server IP in the ossec.conf file on the target VM. For example, on the Ubuntu VM:
 
-sudo nano /var/ossec/etc/ossec.conf
+**sudo nano /var/ossec/etc/ossec.conf**
 <br>
 Next, I connected to the Wazuh server IP from a browser using all the VMs (here 192.168.1.4).
 
