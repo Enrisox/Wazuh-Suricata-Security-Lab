@@ -96,7 +96,7 @@ Inexperienced attackers(Script Kiddies) often use Kali “out of the box” with
 | Destination IP | 192.168.1.1 |
 | Destination Port | 67 |
 
-### STEP 3 SQL INJECTION and XXS alerts generation using DVWA
+### STEP 3: Testing SQL Injection and XSS Attacks Against DVWA Installed on the Ubuntu Target System
 
 **DVWA stands for Damn Vulnerable Web Application.**
 It is an intentionally vulnerable web application designed for use in security testing environments, ethical hacking labs, and cybersecurity training.
@@ -194,3 +194,57 @@ sudo systemctl enable apache2
 sudo systemctl enable mariadb
 ```
 **⚠️ If Apache fails to start, Nginx may already be using port 80**
+
+**6. PHP Configuration**
+Check PHP version:
+```bash
+php -v
+ls /etc/php/
+```
+
+Edit PHP configuration:
+```bash
+sudo nano /etc/php/8.3/apache2/php.ini
+```
+Find:
+```bash
+allow_url_include
+```
+
+Set it to:
+```bash
+allow_url_include = On
+```
+
+**Restart Apache:**
+```bash
+sudo systemctl restart apache2
+```
+**7. Access DVWA**
+Open in your browser:
+
+**http://localhost/DVWA/setup.php**
+
+Click Create / Reset Database.
+Login using default credentials:
+
+```bash
+Username: admin
+Password: password
+```
+**8. Installation Complete**
+DVWA is now fully installed and running.
+
+**From Kali, using the browser, I went to the security options in the lower-left corner and selected Low for this test, then clicked on XSS (Reflected).
+A pop-up window appears with the text inside the double quotes.**
+
+![WAZUH-alert](img/img18.png)
+
+![WAZUH-alert](img/img19.png)
+I entered the following script into the input field:
+```bash
+<script>alert("Hello");</script>
+```
+![WAZUH-alert](img/img20.png)
+Wazuh successfully detected the XSS attack.
+
