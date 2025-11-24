@@ -92,7 +92,7 @@ should finish without errors, displaying “done”.
 ls -la /etc/suricata/rules/
 ```
 <br>
-![Suricata_configuration2](img/img11.png) <br>
+
 
 I tested the configuration:
 ```bash
