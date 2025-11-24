@@ -107,21 +107,21 @@ DVWA is a website full of common vulnerabilities, created to learn and practice:
 * ethical hacking
 * penetration testing techniques
 * web exploits
-*security tools (Burp Suite, sqlmap, Nikto, etc.)
-*detection with IDS/IPS systems like Suricata or Wazuh
+* security tools (Burp Suite, sqlmap, Nikto, etc.)
+* detection with IDS/IPS systems like Suricata or Wazuh
 
 It is used by students, red teams, SOC analysts, and instructors.
 What is DVWA used for?
 DVWA allows you to practice:
 
-🔹 SQL Injection
-🔹 Command Injection
-🔹 Cross‑Site Scripting (XSS)
-🔹 CSRF (Cross‑Site Request Forgery)
-🔹 File Upload Vulnerabilities
-🔹 Brute Force Authentication
-🔹 IDOR / Broken Access Control
-🔹 Weak Session Security
+- SQL Injection
+- Command Injection
+- Cross‑Site Scripting (XSS)
+- CSRF (Cross‑Site Request Forgery)
+- File Upload Vulnerabilities
+- Brute Force Authentication
+- IDOR / Broken Access Control
+- Weak Session Security
 
 
 
