@@ -250,8 +250,37 @@ I entered the following script into the input field:
 Wazuh successfully detected the XSS attack.
 ![WAZUH-alert](img/img21.png)<br>
 
+**WAZUH ALERT**
+Wazuh detected the XSS attack in real time on the Ubuntu VM running the database, which is equipped with the Wazuh agent and Suricata.
+
 ![WAZUH-alert](img/img22.png)<br>
 
+#### STEP 4: download and use of TESTMYNIDS
 
+**I downloaded a NIDS testing script from GitHub:** <br>
+```bash
+curl -sSL "https://raw.githubusercontent.com/3CORESec/testmynids.org/master/tmNIDS" -o /tmp/tmNIDS
+```
+I reviewed the script:
+```bash
+nano /tmp/tmNIDS
+```
+
+Then I made it executable and ran it after checking its content:
+```bash
+chmod +x /tmp/tmNIDS
+sudo /tmp/tmNIDS
+```
+
+Each test should trigger a corresponding alert in Wazuh, and the test was successful. **In this scenario, I ran test number 5, which corresponds to Tor.**
+![WAZUH-alert](img/img23.png)<br>
+Tor is a decentralized and anonymous network that users can rely on to browse the internet privately and securely. However, it is also frequently used by hackers, malicious actors, and cybercriminals who access the dark web and trade stolen data or illegal goods online. Because Tor’s anonymity features can hide the identity of attackers, it becomes difficult for authorities to track their activities. For this reason, it’s important for any organization to block traffic coming from Tor services.
+
+The most popular Tor application is the Tor Browser. When someone accesses any website through the Tor Browser, the traffic is routed through proxy nodes, making interception extremely difficult. From a cybersecurity perspective, we can create a blocklist of IP addresses belonging to such nodes or block Tor-based applications by detecting their signatures.
+
+To perform this test, I went back to the tmNIDS prompt and selected option 5.
+This executed the Tor attack simulation against my Ubuntu server, where Suricata IDS is running.
+
+![WAZUH-alert](img/img24.png)<br>
 
 
