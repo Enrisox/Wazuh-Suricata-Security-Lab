@@ -99,11 +99,11 @@ It should give the following result.
 ### STEP 3 : final steps 
 
 I restarted Suricata before connecting it to Wazuh, checked its status, and enabled automatic startup.
-```bash
+
 **sudo systemctl daemon-reload<br>
 sudo systemctl restart suricata<br>
 sudo systemctl status suricata<br>
-sudo systemctl enable suricata**<br>```
+sudo systemctl enable suricata**<br>
 
 ![Suricata_configuration3](img/img9.png) <br><br>
 
