@@ -103,7 +103,7 @@ I restarted Suricata before connecting it to Wazuh, checked its status, and enab
 **sudo systemctl daemon-reload<br>
 sudo systemctl restart suricata<br>
 sudo systemctl status suricata<br>
-sudo systemctl enable suricata**<br>
+sudo systemctl enable suricata**<br>```
 
 ![Suricata_configuration3](img/img9.png) <br><br>
 
@@ -118,16 +118,16 @@ In the ossec.conf file, I added the following section after the other <localfile
 <localfile>
   <log_format>json</log_format>
   <location>/var/log/suricata/eve.json</location>
-</localfile>
+</localfile>```
 
 It is possible that the eve.json file cannot be accessed due to current permissions:<br>
 
 **ls -la /var/log/suricata/eve.json**
 
 So I changed the permissions of the specific file, ensuring that the directory is accessible:
-
+```bash
 **sudo chmod 644 /var/log/suricata/eve.json   # eve.json can be read and written by the owner <br>
-sudo chmod 755 /var/log/suricata/           # directory fully managed by owner and readable by others**
+sudo chmod 755 /var/log/suricata/           # directory fully managed by owner and readable by others**```
 
 
 Next, I had to restart both services to recreate files with the correct permissions:
