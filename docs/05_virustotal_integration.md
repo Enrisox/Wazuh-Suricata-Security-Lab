@@ -26,12 +26,9 @@ I wanted to trigger VT scanning only when any file was changed, deleted or added
 Typically used in Intrusion Detection and Prevention Systems (IDS/IPS) and platforms like Wazuh or OSSEC.
 It monitors attributes such as:
 
-*File creation / deletion
-
+* File creation / deletion
 * Content modification
-
 * Permission or ownership changes
-
 * File hashes or checksums
 
 
