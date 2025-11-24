@@ -11,9 +11,9 @@ The installation process for the Debian and Ubuntu agents is basically just slig
 
 I repeated the same process for the Ubuntu VM and verified the status of the Wazuh agent on both machines using the command `**sudo systemctl status wazuh-agent** <br>
 
-![Wazuh agent_status](img/img6.png) <br>
+![Wazuh agent_status](img/img6.png) <br><br>
 
-If the agents were installed correctly and connected to the Wazuh server, they should appear as **active** in the dashboard. In this lab, the VM where I will install Suricata will be only the Ubuntu VM, so the Fedora VM will remain powered off and its agent will show as **disconnected**.<br>
+If the agents were installed correctly and connected to the Wazuh server, they should appear as **active** in the dashboard. In this lab, the VM where I will install Suricata will be only the Ubuntu VM, so the Fedora VM will remain powered off and its agent will show as **disconnected**.<br><br>
 
 ![Wazuh_overview agent_status](img/img7.png) <br>
 
