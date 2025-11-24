@@ -30,9 +30,31 @@ It monitors attributes such as:
 * Content modification
 * Permission or ownership changes
 * File hashes or checksums
+ ```bash
+sudo nano /var/ossec/etc/ossec.conf
+ ```
+![Wazuh alert](img/img25.png)
+<br>
+
+**Search for the <syscheck> block.**
+I then added the line for /root immediately after the other <directories> entries:
+ ```bash
+<directories check_all="yes" report_changes="yes" realtime="yes">/root</directories>
+ ```
+Ctrl+X
+
+**Restart the Wazuh agent:**
+
+ ```bash
+sudo systemctl restart wazuh-agent
+ ```
+
+**Expected result<br>
+Any changes in /root (file creation, modification, deletion) will trigger a Wazuh alert. <br>**
+
+The corresponding alerts will have rule IDs 100200 and 100201 as indicated.
+
 
 
 
  
-ssh-keygen -f C:\Users\enris\.ssh\known_hosts -R 192.168.1.4
-
