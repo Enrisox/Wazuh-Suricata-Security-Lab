@@ -29,18 +29,18 @@ It may report issues with the process because the .yaml configuration file needs
 
 I opened the main configuration file:
 
-**sudo nano /etc/suricata/suricata.yaml**
+**sudo nano /etc/suricata/suricata.yaml**<br>
 (I use CTRL+W to search inside the file.)
 
 Main parameters to configure:<br>
-![Suricata_configuration](img/img10.png) <br>
+![Suricata_configuration](img/img10.png) <br><br>
 **HOME_NET: "IP of your Network"**       <br>        #The more specific the network definition, the better the detection accuracy and performance.
 **EXTERNAL_NET: "any"** <br>
 **default-rule-path: /etc/suricata/rules** <br>
 af-packet:
   interface: **enp0s3**   # I check the correct interface using: **ifconfig -a**  <br>
 Note:
-Ubuntu typically assigns names such as enp0s3 to network interfaces on VirtualBox.<br><br>
+Ubuntu typically assigns names such as enp0s3 to network interfaces on VirtualBox.<br>
 
 Older systems used names like eth0, but with the Predictable Network Interface Names system, the format is now enpXsY.
 Understanding Why Suricata Is Not Installed on Every Machine
@@ -48,7 +48,7 @@ Understanding Why Suricata Is Not Installed on Every Machine
 Suricata is not an antivirus and it is not an EDR.It is a Network Intrusion Detection/Prevention System (NIDS/NIPS), and its purpose is to monitor network traffic, not the internal activity of each endpoint.
 Because of this, Suricata should not be installed on every machine.
 
-Why Suricata Is Not Installed on Every Endpoint??
+**Why Suricata Is Not Installed on Every Endpoint?**
 
 Suricata analyzes network traffic, so installing it on all endpoints would be inefficient and ineffective:
 *It would waste CPU and RAM on every host
