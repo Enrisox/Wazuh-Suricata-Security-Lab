@@ -135,8 +135,9 @@ sudo chmod 755 /var/log/suricata/           # directory fully managed by owner a
 
 Next, I had to restart both services to recreate files with the correct permissions:
 
-**sudo systemctl restart suricata<br>
-sudo systemctl restart wazuh-agent**
+```bash
+sudo systemctl restart suricata<br>
+sudo systemctl restart wazuh-agent```
 
 
 
