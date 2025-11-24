@@ -235,16 +235,17 @@ Password: password
 **8. Installation Complete**
 DVWA is now fully installed and running.
 
+**I tried a SQL INJECTION against DVWA**
+![WAZUH-alert](img/img18.png) <br>
+
 **From Kali, using the browser, I went to the security options in the lower-left corner and selected Low for this test, then clicked on XSS (Reflected).
-A pop-up window appears with the text inside the double quotes.**
-
-![WAZUH-alert](img/img18.png)
-
+A pop-up window appears with the text inside the double quotes.** <br>
 ![WAZUH-alert](img/img19.png)
 I entered the following script into the input field:
 ```bash
 <script>alert("Hello");</script>
 ```
-![WAZUH-alert](img/img20.png)
+<br>
+![WAZUH-alert](img/img20.png)<br>
 Wazuh successfully detected the XSS attack.
 
