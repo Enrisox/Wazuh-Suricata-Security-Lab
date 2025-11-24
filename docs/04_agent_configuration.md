@@ -100,11 +100,12 @@ It should give the following result.
 
 I restarted Suricata before connecting it to Wazuh, checked its status, and enabled automatic startup.
 
-**sudo systemctl daemon-reload<br>
-sudo systemctl restart suricata<br>
-sudo systemctl status suricata<br>
-sudo systemctl enable suricata**<br>
-
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart suricata
+sudo systemctl status suricata
+sudo systemctl enable suricata
+```
 ![Suricata_configuration3](img/img9.png) <br><br>
 
 Modify the Wazuh configuration file (`ossec.conf`):
@@ -114,20 +115,22 @@ Modify the Wazuh configuration file (`ossec.conf`):
 Add the configuration for Suricata.
 In the ossec.conf file, I added the following section after the other <localfile> sections:
 
-
+```bash
 <localfile>
   <log_format>json</log_format>
   <location>/var/log/suricata/eve.json</location>
 </localfile>
-
+```
 It is possible that the eve.json file cannot be accessed due to current permissions:<br>
 
 **ls -la /var/log/suricata/eve.json**
 
 So I changed the permissions of the specific file, ensuring that the directory is accessible:
 
-**sudo chmod 644 /var/log/suricata/eve.json   # eve.json can be read and written by the owner <br>
-sudo chmod 755 /var/log/suricata/           # directory fully managed by owner and readable by others**```
+```bash
+sudo chmod 644 /var/log/suricata/eve.json   # eve.json can be read and written by the owner
+sudo chmod 755 /var/log/suricata/           # directory fully managed by owner and readable by others
+```
 
 
 Next, I had to restart both services to recreate files with the correct permissions:
