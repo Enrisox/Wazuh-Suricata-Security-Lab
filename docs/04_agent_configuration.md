@@ -80,9 +80,10 @@ This capture method allows Suricata to read network packets directly from a NIC.
 
 I then installed the ET ruleset (Suricata rules created by the ET community).
 The rules in the ET ruleset cover a wide range of threats, including malware, exploits, policy violations, anomalies, botnets, etc.
-
-**sudo suricata-update** should finish without errors, displaying “done”.
-
+```bash
+sudo suricata-update 
+should finish without errors, displaying “done”.
+```
 **Check which rule files you have in the Suricata rules directory:**
 ![Suricata_configuration3](img/img11.png) <br>
 ```bash
