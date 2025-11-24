@@ -36,8 +36,8 @@ sudo nano /var/ossec/etc/ossec.conf
 ![Wazuh alert](img/img25.png)
 <br>
 
-**Search for the <syscheck> block.**
-I then added the line for /root immediately after the other <directories> entries:
+**Search for the syscheck block.**
+I then added this line for /root immediately after the other <directories> entries:
  ```bash
 <directories check_all="yes" report_changes="yes" realtime="yes">/root</directories>
  ```
