@@ -21,7 +21,7 @@ If the agents were installed correctly and connected to the Wazuh server, they s
 I then installed Suricata in NIDS (Network Intrusion Detection System) mode on the Ubuntu VM. <br>
 
 ```bash
-sudo apt update<br>
+sudo apt update
 sudo apt install suricata -y
 sudo suricata-update
 ```
