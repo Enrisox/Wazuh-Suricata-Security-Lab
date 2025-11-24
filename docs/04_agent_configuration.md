@@ -88,10 +88,10 @@ The rules in the ET ruleset cover a wide range of threats, including malware, ex
 ![Suricata_configuration2](img/img11.png) <br><br>
 **ls -la /etc/suricata/rules/**
 
-c) Test the configuration:
-
-**sudo suricata -T -c /etc/suricata/suricata.yaml**
-
+I tested the configuration:
+```bash
+sudo suricata -T -c /etc/suricata/suricata.yaml
+```
 It should give the following result.
 
 ![Suricata_configuration3](img/img12.png) <br><br>
