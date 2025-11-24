@@ -241,14 +241,17 @@ DVWA is now fully installed and running.
 **From Kali, using the browser, I went to the security options in the lower-left corner and selected Low for this test, then clicked on XSS (Reflected).
 A pop-up window appears with the text inside the double quotes.** <br>
 ![WAZUH-alert](img/img19.png)
-I entered the following script into the input field:
+I entered the following script into the input field: <br>
+
 ```bash
 <script>alert("Hello");</script>
 ```
 
 ![WAZUH-alert](img/img20.png)<br>
+
 Wazuh successfully detected the XSS attack.
 ![WAZUH-alert](img/img21.png)<br>
+
 
 **WAZUH ALERT**
 Wazuh detected the XSS attack in real time on the Ubuntu VM running the database, which is equipped with the Wazuh agent and Suricata.
