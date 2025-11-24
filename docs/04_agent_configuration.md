@@ -25,7 +25,7 @@ I then installed Suricata in NIDS (Network Intrusion Detection System) mode on t
 
 **sudo apt update<br>
 sudo apt install suricata -y<br>
-sudo suricata-update** <br>
+sudo suricata-update** <br><br>
 It may report issues with the process because the .yaml configuration file needs to be corrected with the proper values.
 
 I opened the main configuration file:
