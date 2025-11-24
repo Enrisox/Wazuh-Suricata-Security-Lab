@@ -18,15 +18,14 @@ If the agents were installed correctly and connected to the Wazuh server, they s
 ![Wazuh_overview agent_status](img/img7.png) <br>
 
 ## STEP 2: Suricata integration
-![Wazuh_overview agent_status](img/img8.png) <br>
-
 I then installed Suricata in NIDS (Network Intrusion Detection System) mode on the Ubuntu VM. <br>
 
 
 **sudo apt update<br>
 sudo apt install suricata -y<br>
 sudo suricata-update** <br><br>
-It may report issues with the process because the .yaml configuration file needs to be corrected with the proper values.
+It may report issues with the process because the .yaml configuration file needs to be corrected with the proper values.<br>
+![Wazuh_overview agent_status](img/img8.png) <br>
 
 I opened the main configuration file:
 
