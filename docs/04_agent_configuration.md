@@ -75,6 +75,27 @@ Suricata uses these rules to detect threats and suspicious traffic.
 This capture method allows Suricata to read network packets directly from a NIC.
 **It must be configured with the correct interface** (e.g., eth0, enp0s3, etc.) so that Suricata can actually see the traffic.
 
+## STEP 3 Suricata update and configuration test
+
+I then installed the ET ruleset (Suricata rules created by the ET community).
+The rules in the ET ruleset cover a wide range of threats, including malware, exploits, policy violations, anomalies, botnets, etc.
+
+**sudo suricata-update** should finish without errors, displaying “done”.
+
+**Check which rule files you have in the Suricata rules directory:**
+
+**ls -la /etc/suricata/rules/**
+![Suricata_configuration2](img/img11.png) <br><br>
+
+
+c) Test the configuration:
+
+**sudo suricata -T -c /etc/suricata/suricata.yaml**
+
+It should give the following result.
+
+![Suricata_configuration3](img/img12.png) <br><br>
+
 
 
 
