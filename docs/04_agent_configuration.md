@@ -87,9 +87,8 @@ The rules in the ET ruleset cover a wide range of threats, including malware, ex
 ```bash
 ls -la /etc/suricata/rules/
 ```
-<br><br>
-![Suricata_configuration2](img/img11.png) <br><br>
-
+<br>
+![Suricata_configuration2](img/img11.png) <br>
 
 I tested the configuration:
 ```bash
@@ -97,7 +96,7 @@ sudo suricata -T -c /etc/suricata/suricata.yaml
 ```
 It should give the following result.
 
-![Suricata_configuration3](img/img12.png) <br><br>
+![Suricata_configuration3](img/img12.png) <br>
 
 ### STEP 3 : final steps 
 
@@ -109,7 +108,7 @@ sudo systemctl restart suricata
 sudo systemctl status suricata
 sudo systemctl enable suricata
 ```
-![Suricata_configuration3](img/img9.png) <br><br>
+![Suricata_configuration3](img/img9.png) <br>
 
 Modify the Wazuh configuration file (`ossec.conf`):
 ```bash
