@@ -114,18 +114,18 @@ Modify the Wazuh configuration file (`ossec.conf`):
 Add the configuration for Suricata.
 In the ossec.conf file, I added the following section after the other <localfile> sections:
 
-```bash
+
 <localfile>
   <log_format>json</log_format>
   <location>/var/log/suricata/eve.json</location>
-</localfile>```
+</localfile>
 
 It is possible that the eve.json file cannot be accessed due to current permissions:<br>
 
 **ls -la /var/log/suricata/eve.json**
 
 So I changed the permissions of the specific file, ensuring that the directory is accessible:
-```bash
+
 **sudo chmod 644 /var/log/suricata/eve.json   # eve.json can be read and written by the owner <br>
 sudo chmod 755 /var/log/suricata/           # directory fully managed by owner and readable by others**```
 
