@@ -84,6 +84,7 @@ The rules in the ET ruleset cover a wide range of threats, including malware, ex
 **sudo suricata-update** should finish without errors, displaying “done”.
 
 **Check which rule files you have in the Suricata rules directory:**
+![Suricata_configuration3](img/img11.png) <br>
 ```bash
 ls -la /etc/suricata/rules/
 ```
@@ -125,6 +126,7 @@ In the ossec.conf file, I added the following section after the other <localfile
 </localfile>
 ```
 It is possible that the eve.json file cannot be accessed due to current permissions:<br>
+
 ```bash
 ls -la /var/log/suricata/eve.json
 ```
