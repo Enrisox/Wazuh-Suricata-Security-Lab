@@ -1,0 +1,24 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./   # cartella del tuo sito (metti dist/ se usi build)
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
