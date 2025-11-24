@@ -73,7 +73,8 @@ Reconnaissance is the first phase of the hacking methodology and penetration tes
 **alert generated  <br>
 **Spoofed_iP_ICMP_FLOOD on WIRESHARK**
 ![SpoofedIP-PINGFLOOD-wireshark](img/img15.png)
-<br>
+<br><br>
+
 ![WAZUH-alert](img/img16.png)
 <br>
 
