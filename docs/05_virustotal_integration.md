@@ -9,7 +9,7 @@ sudo nano /var/ossec/etc/ossec.conf
  ```bash
  <integration>
    <name>virustotal</name>
-   <api_key>**PERSONAL_API_KEYS _VIRUSTOTAL**</api_key>
+   <api_key>PERSONAL_API_KEYS _VIRUSTOTAL</api_key>
    <rules_id>100200,100201</rules_id>
    <alert_format>json</alert_format>
   </integration>
