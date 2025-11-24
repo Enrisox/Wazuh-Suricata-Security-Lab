@@ -99,7 +99,7 @@ It should give the following result.
 ### STEP 3 : final steps 
 
 I restarted Suricata before connecting it to Wazuh, checked its status, and enabled automatic startup.
-
+```bash
 **sudo systemctl daemon-reload<br>
 sudo systemctl restart suricata<br>
 sudo systemctl status suricata<br>
@@ -112,8 +112,9 @@ Modify the Wazuh configuration file (`ossec.conf`):
 **sudo nano /var/ossec/etc/ossec.conf**
 
 Add the configuration for Suricata.
-In the ossec.conf file, I added the following section after the other <localfile> sections:<br>
+In the ossec.conf file, I added the following section after the other <localfile> sections:
 
+```bash
 <localfile>
   <log_format>json</log_format>
   <location>/var/log/suricata/eve.json</location>
