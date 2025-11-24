@@ -47,7 +47,7 @@ Reconnaissance is the first phase of the hacking methodology and penetration tes
 
 ![BruteForce_alert](img/img11.png)
 
-**ICMP FLOOD ATTACK**
+**ICMP FLOOD ATTACK** Reconnaissance / Information Gathering
 
 | Field | Value |
 |-------|-------|
@@ -69,7 +69,58 @@ Reconnaissance is the first phase of the hacking methodology and penetration tes
 | Location | /var/log/suricata/eve.json |
 | Manager | wazuh-server |
 | Timestamp | Sep 21, 2025 @ 17:13:32.714 |
-**alert generato
+
+**alert generated  <br>
+**Spoofed_iP_ICMP_FLOOD on WIRESHARK**
+![SpoofedIP-PINGFLOOD-wireshark](img/img15.png)
+<br>
+![WAZUH-alert](img/img16.png)
+<br>
+
+This alert is interesting because it notifies us that a host named Kali sent an IP request to the DHCP server.
+From the default ET rules (the ones we downloaded via suricata-update), this can indicate a potential reconnaissance act in the network.
+Inexperienced attackers(Script Kiddies) often use Kali “out of the box” without changing the machine’s hostname. <br>
+
+| Field | Value |
+|-------|-------|
+| Agent IP | 192.168.1.9 |
+| Agent Name | ubu-serv |
+| Alert Signature | ET POLICY Possible Kali Linux hostname in DHCP Request Packet |
+| Alert Signature ID | 2022973 |
+| Alert Severity | Informational |
+| Alert Action | allowed |
+| Application Protocol | DHCP |
+| Source IP | 192.168.1.6 |
+| Destination IP | 192.168.1.1 |
+| Destination Port | 67 |
+
+### STEP 3 SQL INJECTION and XXS alerts generation using DVWA
+
+**DVWA stands for Damn Vulnerable Web Application.**
+It is an intentionally vulnerable web application designed for use in security testing environments, ethical hacking labs, and cybersecurity training.
+
+**What is DVWA? (simple explanation)**
+DVWA is a website full of common vulnerabilities, created to learn and practice:
+
+* ethical hacking
+* penetration testing techniques
+* web exploits
+*security tools (Burp Suite, sqlmap, Nikto, etc.)
+*detection with IDS/IPS systems like Suricata or Wazuh
+
+It is used by students, red teams, SOC analysts, and instructors.
+What is DVWA used for?
+DVWA allows you to practice:
+
+🔹 SQL Injection
+🔹 Command Injection
+🔹 Cross‑Site Scripting (XSS)
+🔹 CSRF (Cross‑Site Request Forgery)
+🔹 File Upload Vulnerabilities
+🔹 Brute Force Authentication
+🔹 IDOR / Broken Access Control
+🔹 Weak Session Security
+
 
 
 
