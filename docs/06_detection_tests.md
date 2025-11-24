@@ -245,7 +245,13 @@ I entered the following script into the input field:
 ```bash
 <script>alert("Hello");</script>
 ```
-<br>
-![WAZUH-alert](img/img20.png)
+
+![WAZUH-alert](img/img20.png)<br>
 Wazuh successfully detected the XSS attack.
+![WAZUH-alert](img/img21.png)<br>
+
+![WAZUH-alert](img/img22.png)<br>
+
+
+
 
