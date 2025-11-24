@@ -123,7 +123,74 @@ DVWA allows you to practice:
 - IDOR / Broken Access Control
 - Weak Session Security
 
+```bash
+sudo apt update
+sudo apt -y install apache2 mariadb-server php php-mysqli php-gd libapache2-mod-php git
+```
 
+Initial MariaDB Configuration
 
+Run the security script:
+```bash
+sudo mysql_secure_installation
+```
 
+**Recommended answers:**
+Switch to unix_socket authentication? → N
+Set root password? → Y
+Remove anonymous users? → Y
+Disallow root login remotely? → Y
+Remove test database? → Y
+Reload privilege tables? → Y
 
+**1. This script does NOT create the DVWA database. It only secures MariaDB.**
+
+**2. Create DVWA Database and User**
+Enter MariaDB shell:
+```bash
+sudo mysql -u root
+```
+
+**3.Run the SQL commands:**
+
+```bash
+CREATE DATABASE dvwa;
+CREATE USER 'dvwa'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON dvwa.* TO 'dvwa'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+**Test login with the DVWA user:**
+```bash
+mysql -u dvwa -p
+```
+
+**4. Download and Configure DVWA**
+**Clone DVWA:**
+```bash
+cd /var/www/html
+sudo git clone https://github.com/digininja/DVWA.git
+```
+
+**Edit the configuration file:**
+```bash
+sudo nano /var/www/html/DVWA/config/config.inc.php
+```
+
+**Set these values:**
+```bash
+$_DVWA['db_user'] = 'dvwa';
+$_DVWA['db_password'] = 'password';
+$_DVWA['db_database'] = 'dvwa';
+$_DVWA['db_server'] = 'localhost';
+```
+
+**5. Start and Enable Services**
+```bash
+sudo systemctl start mysql
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo systemctl enable mariadb
+```
+**⚠️ If Apache fails to start, Nginx may already be using port 80**
