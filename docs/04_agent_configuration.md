@@ -48,7 +48,7 @@ Older systems used names like eth0, but with the Predictable Network Interface N
 Configuration details<br><br>
 **HOME_NET**:
 This variable must be set to the IP address (or network range) of the agent.
-It defines the internal or protected network that Suricata must monitor.
+It defines the internal or protected network that Suricata must monitor.<br>
 
 **EXTERNAL_NET**:
 This is usually set to "any" so Suricata monitors traffic from any external IP address.
