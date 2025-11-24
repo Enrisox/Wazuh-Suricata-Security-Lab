@@ -109,8 +109,30 @@ sudo systemctl enable suricata**<br>
 
 Modify the Wazuh configuration file (`ossec.conf`):
 
-```bash
-sudo nano /var/ossec/etc/ossec.conf
+**sudo nano /var/ossec/etc/ossec.conf**
+
+Add the configuration for Suricata.
+In the ossec.conf file, I added the following section after the other <localfile> sections:<br>
+
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>
+
+It is possible that the eve.json file cannot be accessed due to current permissions:<br>
+
+**ls -la /var/log/suricata/eve.json**
+
+So I changed the permissions of the specific file, ensuring that the directory is accessible:
+
+**sudo chmod 644 /var/log/suricata/eve.json   # eve.json can be read and written by the owner <br>
+sudo chmod 755 /var/log/suricata/           # directory fully managed by owner and readable by others**
+
+
+Next, I had to restart both services to recreate files with the correct permissions:
+
+**sudo systemctl restart suricata<br>
+sudo systemctl restart wazuh-agent**
 
 
 
