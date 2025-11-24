@@ -84,10 +84,12 @@ The rules in the ET ruleset cover a wide range of threats, including malware, ex
 **sudo suricata-update** should finish without errors, displaying “done”.
 
 **Check which rule files you have in the Suricata rules directory:**
-
-
+```bash
+ls -la /etc/suricata/rules/
+```
+<br><br>
 ![Suricata_configuration2](img/img11.png) <br><br>
-**ls -la /etc/suricata/rules/**
+
 
 I tested the configuration:
 ```bash
