@@ -1,4 +1,4 @@
-# Wazuh: Install & enroll the agent
+# STEP 1 : Wazuh: Install & enroll the agent
 To get started, I installed the Wazuh agent on each VM, except for the Kali Linux VM (which will act as the attacker), by clicking the blue "Deploy New Agent" button. <br>
 
 ![Wazuh agent_install](img/img4.png) <br>
@@ -12,6 +12,13 @@ The installation process for the Debian and Ubuntu agents is basically just slig
 I repeated the same process for the Ubuntu VM and verified the status of the Wazuh agent on both machines using the command `**sudo systemctl status wazuh-agent** <br>
 
 ![Wazuh agent_status](img/img6.png) <br>
+
+If the agents were installed correctly and connected to the Wazuh server, they should appear as **active** in the dashboard. In this lab, the VM where I will install Suricata will be only the Ubuntu VM, so the Fedora VM will remain powered off and its agent will show as **disconnected**.
+
+![Wazuh_overview agent_status](img/img6.png) <br>
+
+##STEP 2: Suricata integration
+
 
 
 
