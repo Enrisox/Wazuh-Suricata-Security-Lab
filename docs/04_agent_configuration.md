@@ -107,6 +107,11 @@ sudo systemctl enable suricata**<br>
 
 ![Suricata_configuration3](img/img9.png) <br><br>
 
+Modify the Wazuh configuration file (`ossec.conf`):
+
+```bash
+sudo nano /var/ossec/etc/ossec.conf
+
 
 
 
