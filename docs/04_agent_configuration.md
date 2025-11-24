@@ -105,6 +105,7 @@ sudo systemctl restart suricata
 sudo systemctl status suricata
 sudo systemctl enable suricata**<br>
 
+![Suricata_configuration3](img/img9.png) <br><br>
 
 
 
