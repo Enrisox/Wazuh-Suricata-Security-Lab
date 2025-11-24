@@ -34,6 +34,8 @@ flow:to_server,established → checks only established connections directed to t
 content:"SSH-2.0-OpenSSH" → searches for this string in the packet content; it is the typical identifier of SSH/OpenSSH connections.
 sid:100001 → unique identifier of the rule.
 ```
+___
+
 ## STEP 2: Kali Linux VM used to test alert responses on the Wazuh dashboard
 
 I fed Hydra a text file, created in 10 seconds with AI, containing a set of 4‑digit codes often used as passwords, such as 1234, 1111, 0000, 1212, etc.
@@ -95,6 +97,8 @@ Inexperienced attackers(Script Kiddies) often use Kali “out of the box” with
 | Source IP | 192.168.1.6 |
 | Destination IP | 192.168.1.1 |
 | Destination Port | 67 |
+
+___
 
 ### STEP 3: Testing SQL Injection and XSS Attacks Against DVWA Installed on the Ubuntu Target System
 
@@ -257,6 +261,8 @@ Wazuh successfully detected the XSS attack.
 Wazuh detected the XSS attack in real time on the Ubuntu VM running the database, which is equipped with the Wazuh agent and Suricata.
 
 ![WAZUH-alert](img/img22.png)<br>
+
+___
 
 #### STEP 4: download and use of TESTMYNIDS
 
