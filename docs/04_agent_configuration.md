@@ -45,7 +45,7 @@ Note:
 Ubuntu typically assigns names such as enp0s3 to network interfaces on VirtualBox.
 Older systems used names like eth0, but with the Predictable Network Interface Names system, the format is now enpXsY.
 
-Configuration details
+Configuration details<br><br>
 **HOME_NET**:
 This variable must be set to the IP address (or network range) of the agent.
 It defines the internal or protected network that Suricata must monitor.
