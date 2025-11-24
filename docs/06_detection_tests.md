@@ -274,12 +274,13 @@ sudo /tmp/tmNIDS
 
 Each test should trigger a corresponding alert in Wazuh, and the test was successful. **In this scenario, I ran test number 5, which corresponds to Tor.**
 ![WAZUH-alert](img/img23.png)<br>
-Tor is a decentralized and anonymous network that users can rely on to browse the internet privately and securely. However, it is also frequently used by hackers, malicious actors, and cybercriminals who access the dark web and trade stolen data or illegal goods online. Because Tor’s anonymity features can hide the identity of attackers, it becomes difficult for authorities to track their activities. For this reason, it’s important for any organization to block traffic coming from Tor services.
 
+Tor is a decentralized and anonymous network that users can rely on to browse the internet privately and securely. However, it is also frequently used by hackers, malicious actors, and cybercriminals who access the dark web and trade stolen data or illegal goods online. Because Tor’s anonymity features can hide the identity of attackers, it becomes difficult for authorities to track their activities. For this reason, it’s important for any organization to block traffic coming from Tor services.
 The most popular Tor application is the Tor Browser. When someone accesses any website through the Tor Browser, the traffic is routed through proxy nodes, making interception extremely difficult. From a cybersecurity perspective, we can create a blocklist of IP addresses belonging to such nodes or block Tor-based applications by detecting their signatures.
 
 To perform this test, I went back to the tmNIDS prompt and selected option 5.
 This executed the Tor attack simulation against my Ubuntu server, where Suricata IDS is running.
+<br>
 
 ![WAZUH-alert](img/img24.png)<br>
 
