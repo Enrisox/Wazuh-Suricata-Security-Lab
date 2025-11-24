@@ -35,8 +35,8 @@ I opened the main configuration file:
 
 Main parameters to configure:
 
-**HOME_NET: "IP of the Ubuntu VM"**      # in my case 192.168.1.9
-**EXTERNAL_NET: "any"**
+**HOME_NET: "IP of the Ubuntu VM"**      # in my case 192.168.1.9 <br>
+**EXTERNAL_NET: "any"** <br>
 **default-rule-path: /etc/suricata/rules** <br>
 
 af-packet:
@@ -45,7 +45,7 @@ Note:
 Ubuntu typically assigns names such as enp0s3 to network interfaces on VirtualBox.
 Older systems used names like eth0, but with the Predictable Network Interface Names system, the format is now enpXsY.
 
-Configuration details<br><br>
+**Configuration details**<br><br>
 **HOME_NET**:
 This variable must be set to the IP address (or network range) of the agent.
 It defines the internal or protected network that Suricata must monitor.<br>
