@@ -1,5 +1,5 @@
 
-# STEP 1: 
+# STEP 1: LET'S START!
 
 Using pentesting tools on the Kali Linux machine, I performed several scans to gather information about the target Ubuntu machine and attack it, in order to verify whether the Wazuh agent together with Suricata detected the malicious activity.
 
