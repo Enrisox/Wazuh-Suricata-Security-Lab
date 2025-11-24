@@ -30,8 +30,10 @@ It may report issues with the process because the .yaml configuration file needs
 
 I opened the main configuration file:
 
-**sudo nano /etc/suricata/suricata.yaml**<br>
+```bash
+sudo nano /etc/suricata/suricata.yaml
 (I use CTRL+W to search inside the file.)
+```
 
 Main parameters to configure:<br>
 ![Suricata_configuration](img/img10.png) <br><br>
