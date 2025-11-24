@@ -20,47 +20,47 @@ If the agents were installed correctly and connected to the Wazuh server, they s
 ## STEP 2: Suricata integration
 ![Wazuh_overview agent_status](img/img8.png) <br>
 
-I then installed Suricata in NIDS (Network Intrusion Detection System) mode on the Ubuntu VM.
+I then installed Suricata in NIDS (Network Intrusion Detection System) mode on the Ubuntu VM. <br>
 
-'''bash
-sudo apt update
+
+**sudo apt update
 sudo apt install suricata -y
-sudo suricata-update
+sudo suricata-update** <br>
 It may report issues with the process because the .yaml configuration file needs to be corrected with the proper values.
 
 I opened the main configuration file:
 
-sudo nano /etc/suricata/suricata.yaml
+**sudo nano /etc/suricata/suricata.yaml**
 (I use CTRL+W to search inside the file.)
 
 Main parameters to configure:
 
-HOME_NET: "IP of the Ubuntu VM"      # in my case 192.168.1.9
-EXTERNAL_NET: "any"
-default-rule-path: /etc/suricata/rules  <br>
+**HOME_NET: "IP of the Ubuntu VM"**      # in my case 192.168.1.9
+**EXTERNAL_NET: "any"**
+**default-rule-path: /etc/suricata/rules** <br>
 
 af-packet:
-  interface: enp0s3   # I check the correct interface using: ifconfig -a  <br>
+  interface: **enp0s3**   # I check the correct interface using: **ifconfig -a**  <br>
 Note:
 Ubuntu typically assigns names such as enp0s3 to network interfaces on VirtualBox.
 Older systems used names like eth0, but with the Predictable Network Interface Names system, the format is now enpXsY.
 
 Configuration details
-HOME_NET:
+**HOME_NET**:
 This variable must be set to the IP address (or network range) of the agent.
 It defines the internal or protected network that Suricata must monitor.
 
-EXTERNAL_NET:
+**EXTERNAL_NET**:
 This is usually set to "any" so Suricata monitors traffic from any external IP address.
 It represents everything outside the protected network.
 
-default-rule-path:
+**default-rule-path**:
 This is the path where Suricata stores its rule files.
 Suricata uses these rules to detect threats and suspicious traffic.
 
-af-packet:
+**af-packet**:
 This capture method allows Suricata to read network packets directly from a NIC.
-It must be configured with the correct interface (e.g., eth0, enp0s3, etc.) so that Suricata can actually see the traffic.
+**It must be configured with the correct interface** (e.g., eth0, enp0s3, etc.) so that Suricata can actually see the traffic.
 
 
 
