@@ -96,6 +96,17 @@ It should give the following result.
 
 ![Suricata_configuration3](img/img12.png) <br><br>
 
+### STEP 3 : final steps 
+
+I restarted Suricata before connecting it to Wazuh, checked its status, and enabled automatic startup.
+
+**sudo systemctl daemon-reload
+sudo systemctl restart suricata
+sudo systemctl status suricata
+sudo systemctl enable suricata**<br>
+
+
+
 
 
 
