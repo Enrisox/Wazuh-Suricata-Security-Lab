@@ -84,9 +84,9 @@ The rules in the ET ruleset cover a wide range of threats, including malware, ex
 
 **Check which rule files you have in the Suricata rules directory:**
 
-**ls -la /etc/suricata/rules/**
-![Suricata_configuration2](img/img11.png) <br><br>
 
+![Suricata_configuration2](img/img11.png) <br><br>
+**ls -la /etc/suricata/rules/**
 
 c) Test the configuration:
 
