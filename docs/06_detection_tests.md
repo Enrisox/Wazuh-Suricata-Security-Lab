@@ -289,8 +289,8 @@ The most popular Tor application is the Tor Browser. When someone accesses any w
 
 To perform this test, I went back to the tmNIDS prompt and selected option 5.
 This executed the Tor attack simulation against my Ubuntu server, where Suricata IDS is running.
-<br>
+<br><br>
 
-![WAZUH-alert](img/img24.png)<br>
+![WAZUH-alert](img/img24.png)
 
 
