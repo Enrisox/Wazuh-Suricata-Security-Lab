@@ -246,6 +246,6 @@ I entered the following script into the input field:
 <script>alert("Hello");</script>
 ```
 <br>
-![WAZUH-alert](img/img20.png)<br>
+![WAZUH-alert](img/20.png)<br>
 Wazuh successfully detected the XSS attack.
 
