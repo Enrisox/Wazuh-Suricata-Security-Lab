@@ -22,7 +22,6 @@ All detailed documentation is inside the `/docs` folder.
 
 ## **5️⃣ VirusTotal Integration**
 ➡️ *coming soon*  
-(or: [05_virustotal_integration.md](docs/05_virustotal_integration.md) if you create it)
 
 ## **6️⃣ Wazuh Agent Troubleshooting**
 ➡️ [06_wazuh_agent_troubleshooting.md](docs/06_wazuh_agent_troubleshooting.md)
@@ -70,7 +69,7 @@ This lab demonstrates:
 
 If you want to discuss the lab or improvements:
 
-**Enrico – Cybersecurity Student**  
+**Enrico Soci – Cybersecurity Student**  
 enricosoci@protonmail.com
 
 ---
