@@ -55,15 +55,10 @@ Any changes in /root (file creation, modification, deletion) will trigger a Wazu
 The corresponding alerts will have rule IDs 100200 and 100201 as indicated.
 
 
-Esatto, hai intuito bene la logica.
 
-Il tutorial ti fa creare una cartella specifica (es. /tmp/malware) e dare permessi massimi (777) per due motivi tattici molto intelligenti per un ambiente di test:
 
-Risparmiare le API di VirusTotal: Come ti dicevo, la licenza gratuita ti dà solo 4 controlli al minuto. Se tu dicessi a Wazuh di controllare "Tutto il computer", finiresti le API in un secondo (basta che il sistema aggiorni un log o scarichi un aggiornamento). Facendolo guardare solo in quella cartella, sei sicuro che VirusTotal verrà interpellato solo quando TU metti un file lì dentro.
+Permessi Facili (777): Dare chmod 777 significa "chiunque può scrivere qui".
 
-Permessi Facili (777): Dare chmod 777 significa "chiunque può scrivere qui". In un tutorial è comodo perché puoi scaricare virus con il tuo utente, con root o con script automatici senza mai avere errori di "Permesso negato".
-
-Ecco come replicare esattamente quel passaggio del tutorial sulla tua VM Ubuntu, integrandolo con la configurazione locale che è più semplice.
 
 Passo 1: Crea la "Gabbia" per i Malware (VM Ubuntu)
 Apri il terminale della tua VM Ubuntu (l'agente) e dai questi comandi:
@@ -82,9 +77,6 @@ Apri la console della VM Wazuh e edita il file:
 
 sudo nano /var/ossec/etc/ossec.conf
 Scorri verso il basso (o usa CTRL+W per cercare <global>). Incolla questo blocco subito prima della riga finale </ossec_config>.
-
-⚠️ IMPORTANTE: Cancella INCOLLA_QUI_LA_TUA_API_KEY e metti la tua stringa lunga di VirusTotal.
-
 
 <integration>
   <name>virustotal</name>
@@ -105,12 +97,9 @@ Configurazione Porta Agenti (Cruciale) Aggiunto/Verificato il blocco <remote> pe
 
 Attivazione FIM Realtime: Nella sezione <syscheck>, aggiunta la cartella specifica:
 
-XML
-
 <directories realtime="yes" check_all="yes">/tmp/malware</directories>
 
 Salva (CTRL+O, Invio) ed Esci (CTRL+X).
-
 
 Riavvia il Manager per applicare:
 
