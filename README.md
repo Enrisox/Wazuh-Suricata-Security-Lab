@@ -1,5 +1,5 @@
 # Wazuh-Suricata-Security-Lab
-My name is Enrico Soci and I am a second-year student at the ITS Academy Olivetti, enrolled in the course “Information Systems Security & Integration Specialist – DevSecOps”.
+My name is Enrico Soci and I am a second-year student at the ITS Academy Olivetti, enrolled in the course “**Information Systems Security & Integration Specialist – DevSecOps**” (**5 LEV ECQ**).
 I am passionate about experimenting and building hands-on labs with the tools at my disposal.
 In this lab environment I deploy and experiment with Wazuh and its main integrations — including Suricata and VirusTotal — to monitor, detect, and protect endpoints and small enterprise networks.
 
