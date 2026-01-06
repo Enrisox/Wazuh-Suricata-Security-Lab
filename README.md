@@ -11,25 +11,24 @@ In this lab environment I deploy and experiment with Wazuh and its main integrat
 All detailed documentation is inside the `/docs` folder.
 
 ## Introduction
-[01_intro.md](docs/01_intro.md)
+- [01_intro.md](docs/01_intro.md)
 
-## Lab Infrastructure**
-[02_lab_infrastructure.md](docs/02_lab_setup.md)
+## Lab Infrastructure
+- [02_lab_infrastructure.md](docs/02_lab_setup.md)
 
-## Wazuh Installation & Configuration**
-[03_wazuh_installation.md](docs/03_wazuh_installation.md)
+## Wazuh Installation & Configuration
+- [03_wazuh_installation.md](docs/03_wazuh_installation.md)
 
 ## Suricata Setup
-[04_suricata_setup.md](docs/04_suricata_setup.md)
+- [04_suricata_setup.md](docs/04_suricata_setup.md)
 
-## VirusTotal Integration**
-[05_VT.md](docs/05_virustotal_integration.md)
+## VirusTotal Integration
+- [05_VT.md](docs/05_virustotal_integration.md)
 
-## Wazuh Agent Troubleshooting**
-[06_wazuh_agent_troubleshooting.md](docs/06_wazuh_agent_troubleshooting.md)
-
-## Detection Tests (Wazuh + Suricata + VirusTotal)**
-[07_detection_tests.md](docs/07_detection_tests.md)
+## Wazuh Agent Troubleshooting
+- [06_wazuh_agent_troubleshooting.md](docs/06_wazuh_agent_troubleshooting.md)
+## Detection Tests (Wazuh + Suricata + VirusTotal)
+- [07_detection_tests.md](docs/07_detection_tests.md)
 
 
 
