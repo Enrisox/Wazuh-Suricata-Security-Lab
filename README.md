@@ -29,12 +29,11 @@ All detailed documentation is inside the `/docs` folder.
 ## **7️⃣ Detection Tests (Wazuh + Suricata + VirusTotal)**
 ➡️ [07_detection_tests.md](docs/07_detection_tests.md)
 
-## **8️⃣ Conclusion**
-➡️ [08_conclusion.md](docs/08_conclusion.md)
+
 
 ---
 
-# 🧩 Overview
+##
 
 This lab demonstrates:
 
@@ -51,7 +50,7 @@ This lab demonstrates:
 
 ---
 
-# 🛠 Tech Stack
+## Tech stack
 
 | Component | Purpose |
 |----------|---------|
@@ -65,13 +64,12 @@ This lab demonstrates:
 
 ---
 
-# 📬 Contact
+## Contact
 
 If you want to discuss the lab or improvements:
 
-**Enrico Soci – Cybersecurity Student**  
+**Enrico Soci – Cybersecurity and DevSecOps Student**  
 enricosoci@protonmail.com
 
 ---
 
-# ⭐ If this project helps you, feel free to star the repo!
