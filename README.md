@@ -64,6 +64,7 @@ This lab demonstrates:
 | **MikroTik Router(OPTIONAL)** | DHCP, routing |
 
 ---
+If you found this project useful, please give it a ⭐ star!
 
 ## Contact
 
