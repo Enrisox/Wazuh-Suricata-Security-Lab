@@ -54,40 +54,37 @@ Any changes in /root (file creation, modification, deletion) will trigger a Wazu
 
 The corresponding alerts will have rule IDs 100200 and 100201 as indicated.
 
-
-
-
-Permessi Facili (777): Dare chmod 777 significa "chiunque può scrivere qui".
-
-
-Passo 1: Crea la "Gabbia" per i Malware (VM Ubuntu)
-Apri il terminale della tua VM Ubuntu (l'agente) e dai questi comandi:
-
-# 1. Crea la cartella temporanea
+Step 1: Create the Malware "Cage" (Ubuntu VM)
+Open the terminal on your Ubuntu VM (the agent) and run these commands:
+ ```bash
+# 1. Create the temporary folder
 sudo mkdir -p /tmp/malware
 
-# 2. Dai i permessi a tutti (Lettura/Scrittura/Esecuzione)
+# 2. Grant permissions to everyone (Read/Write/Execute)
 sudo chmod 777 /tmp/malware
-(Nota: La cartella /tmp si svuota ogni volta che riavvii il PC. Per i test va benissimo, ma se vuoi una cartella fissa, falla nella tua home).
+ ```
 
-Sul Manager (VM Wazuh OVA)
-Qui diciamo a Wazuh: "Se qualcuno tocca i file, chiedi a VirusTotal se sono infetti".
-
-Apri la console della VM Wazuh e edita il file:
-
+(Note: The /tmp folder is cleared every time you restart the PC. This is fine for testing, but if you want a permanent folder, create it in your home directory).
+On the Manager (Wazuh OVA VM)
+Here we tell Wazuh: "If someone touches the files, ask VirusTotal if they are infected."
+Open the Wazuh VM console and edit the file:
+ ```bash
 sudo nano /var/ossec/etc/ossec.conf
-Scorri verso il basso (o usa CTRL+W per cercare <global>). Incolla questo blocco subito prima della riga finale </ossec_config>.
+ ```
 
+Scroll down (or use CTRL+W to search for <global>). Paste this block just before the final </ossec_config> line.
+ ```bash
 <integration>
   <name>virustotal</name>
-  <api_key>INCOLLA_QUI_LA_TUA_API_KEY</api_key>
+  <api_key>PASTE_YOUR_API_KEY_HERE</api_key>
   <group>syscheck</group>
   <alert_format>json</alert_format>
 </integration>
+ ```
+Agent Port Configuration (Crucial)
+Add/Verify the <remote> block to enable listening on TCP port 1514. Note: This must be placed outside the <global> block.
 
-
-Configurazione Porta Agenti (Cruciale) Aggiunto/Verificato il blocco <remote> per abilitare l'ascolto sulla porta 1514 TCP. Nota: Va posizionato fuori dal blocco <global>.
-
+ ```bash
 <remote>
   <connection>secure</connection>
   <port>1514</port>
@@ -95,12 +92,19 @@ Configurazione Porta Agenti (Cruciale) Aggiunto/Verificato il blocco <remote> pe
   <queue_size>131072</queue_size>
 </remote>
 
-Attivazione FIM Realtime: Nella sezione <syscheck>, aggiunta la cartella specifica:
+ ```
+Realtime FIM Activation:
+In the <syscheck> section, add the specific folder:
 
+ ```bash
 <directories realtime="yes" check_all="yes">/tmp/malware</directories>
+ ```
+Save (CTRL+O, Enter) and Exit (CTRL+X).
+Restart the Manager to apply changes:
 
-Salva (CTRL+O, Invio) ed Esci (CTRL+X).
+ ```bash
+sudo systemctl restart wazuh-manager
+ ```
 
-Riavvia il Manager per applicare:
 
-sudo systemctl restart wazuh-manager 
+
