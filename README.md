@@ -38,7 +38,7 @@ All detailed documentation is inside the `/docs` folder.
 This lab demonstrates:
 
 - Deployment of Wazuh Manager (OVA)
-- Installation of Ubuntu, Kali, Fedora agents
+- Installation of Wazuh agents
 - Suricata IDS on Linux endpoints
 - VirusTotal API integration for malware reputation checks
 - Detection of:
