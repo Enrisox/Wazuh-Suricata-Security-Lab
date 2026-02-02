@@ -59,8 +59,7 @@ This lab demonstrates:
 | **Suricata** | Network IDS |
 | **VirusTotal API** | Malware reputation |
 | **VirtualBox** | Lab virtualization |
-| **Ubuntu / Kali / Fedora** | Test endpoints |
-| **MikroTik Router(OPTIONAL)** | DHCP, routing |
+| **Ubuntu** | Test endpoints |
 
 ---
 If you found this project useful, please give it a ⭐ star!
