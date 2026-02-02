@@ -25,10 +25,9 @@ All detailed documentation is inside the `/docs` folder.
 ## VirusTotal Integration
 - [05_VT.md](docs/05_virustotal_integration.md)
 
-## Wazuh Agent Troubleshooting
-- [06_wazuh_agent_troubleshooting.md](docs/06_wazuh_agent_troubleshooting.md)
+
 ## Detection Tests (Wazuh + Suricata + VirusTotal)
-- [07_detection_tests.md](docs/07_detection_tests.md)
+- [06_detection_tests.md](docs/06_detection_tests.md)
 
 
 
